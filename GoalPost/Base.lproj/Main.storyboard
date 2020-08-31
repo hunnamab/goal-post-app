@@ -252,24 +252,26 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="svT-8J-ua6">
-                                <rect key="frame" x="20" y="95.000000000000014" width="374" height="239.33333333333337"/>
+                                <rect key="frame" x="20" y="95" width="374" height="264.33333333333331"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="What's your goal?" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="A0j-WX-VId">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfD-hi-J0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="175"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="8Ho-sg-7gU"/>
+                                            <constraint firstAttribute="height" constant="175" id="MUs-WZ-gey"/>
                                         </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select One:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muT-BB-jQm">
-                                        <rect key="frame" x="0.0" y="160" width="73.333333333333329" height="19.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="185" width="73.333333333333329" height="19.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="87g-cn-WlW">
-                                        <rect key="frame" x="0.0" y="189.33333333333331" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="214.33333333333331" width="374" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGS-k0-67d">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
@@ -300,10 +302,9 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="A0j-WX-VId" secondAttribute="trailing" id="7qx-vK-xVZ"/>
                                     <constraint firstAttribute="trailing" secondItem="87g-cn-WlW" secondAttribute="trailing" id="9Hl-x7-ozl"/>
-                                    <constraint firstItem="A0j-WX-VId" firstAttribute="leading" secondItem="svT-8J-ua6" secondAttribute="leading" id="Jnx-J1-7yM"/>
-                                    <constraint firstItem="A0j-WX-VId" firstAttribute="top" secondItem="svT-8J-ua6" secondAttribute="top" id="QuQ-KS-w3T"/>
+                                    <constraint firstAttribute="trailing" secondItem="LfD-hi-J0K" secondAttribute="trailing" id="Hcs-SF-hkZ"/>
+                                    <constraint firstItem="LfD-hi-J0K" firstAttribute="leading" secondItem="svT-8J-ua6" secondAttribute="leading" id="X2E-gc-sir"/>
                                     <constraint firstItem="87g-cn-WlW" firstAttribute="leading" secondItem="svT-8J-ua6" secondAttribute="leading" id="p9d-Lw-Nv0"/>
                                 </constraints>
                             </stackView>
@@ -337,7 +338,7 @@
                         <viewLayoutGuide key="safeArea" id="GL4-17-CHQ"/>
                     </view>
                     <connections>
-                        <outlet property="goalTextView" destination="A0j-WX-VId" id="TX3-9K-BIQ"/>
+                        <outlet property="goalTextView" destination="LfD-hi-J0K" id="5Ju-HS-tg6"/>
                         <outlet property="longTermBtn" destination="cHm-As-aek" id="hAI-pD-lvl"/>
                         <outlet property="nextBtn" destination="zir-Zc-8QJ" id="tzN-h5-ee4"/>
                         <outlet property="shortTermBtn" destination="nGS-k0-67d" id="6aT-Yc-9hJ"/>
