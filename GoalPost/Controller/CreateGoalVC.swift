@@ -44,8 +44,4 @@ class CreateGoalVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func backBtnWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }

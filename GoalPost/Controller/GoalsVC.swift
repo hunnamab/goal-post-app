@@ -84,8 +84,6 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-nspr
-
 extension GoalsVC {
     func setProgress(atIndexPath indexPath: IndexPath) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }

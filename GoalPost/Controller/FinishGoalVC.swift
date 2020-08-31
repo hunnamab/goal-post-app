@@ -31,10 +31,6 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         pointsTextField.delegate = self
     }
     
-    @IBAction func backBtnWasPressed(_ sender: Any) {
-        
-    }
-    
     @IBAction func createGoalBtnWasPressed(_ sender: Any) {
         if pointsTextField.text != "" {
             self.save { (complete) in
