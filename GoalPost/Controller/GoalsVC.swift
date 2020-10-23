@@ -76,6 +76,7 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
             (action, view, success) in
             self.setProgress(atIndexPath: indexPath)
             tableView.reloadRows(at: [indexPath], with: .automatic)
+            tableView.reloadData()
         })
         
         deleteAction.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
