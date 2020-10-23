@@ -24,6 +24,14 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         goalTextView.delegate = self
         goalTextView.textColor = .lightGray
         goalTextView.text = "What's your goal?"
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+         target: self,
+         action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissMyKeyboard() {
+        view.endEditing(true)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

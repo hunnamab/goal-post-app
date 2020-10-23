@@ -29,6 +29,10 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pointsTextField.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+         target: self,
+         action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func createGoalBtnWasPressed(_ sender: Any) {
@@ -40,6 +44,10 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    @objc func dismissMyKeyboard() {
+        view.endEditing(true)
     }
     
     func save(completion: (_ finished: Bool) -> ()) {
@@ -59,4 +67,5 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
             completion(false)
         }
     }
+
 }
